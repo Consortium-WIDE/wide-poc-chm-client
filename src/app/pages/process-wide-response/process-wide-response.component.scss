@@ -1,0 +1,9 @@
+@import 'imports';
+
+.scrollable {
+    max-height: 60vh;
+    overflow: auto;
+    background: $light-red;
+    padding: 10px;
+    border-radius: 15px;
+}

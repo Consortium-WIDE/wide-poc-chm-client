@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { LandingLayoutComponent } from './layouts/landing-layout/landing-layout.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { ProcessWideResponseComponent } from './pages/process-wide-response/process-wide-response.component';
 
 export const routes: Routes = [
     {
@@ -11,6 +12,7 @@ export const routes: Routes = [
         component: MainLayoutComponent,
         children: [
             { path: '', component: HomeComponent },
+            { path: 'process', component: ProcessWideResponseComponent },
         ]
     },
     {
