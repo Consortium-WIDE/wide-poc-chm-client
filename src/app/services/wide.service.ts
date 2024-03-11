@@ -7,33 +7,12 @@ import { Observable, catchError, of, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class WideService {
-  private configCache: { [domain: string]: any } = {};
-  private apiUrl = environment.wide.wideApiUri;
+  private apiUrl = environment.widePoap.wideApiUri;
 
   constructor(private http: HttpClient) { }
 
-  fetchOAuthConfig(): Observable<any> {
-    const domain = environment.wide.domain;
-
-    // Check if config is already cached
-    if (this.configCache[domain]) {
-      return of(this.configCache[domain]);
-    }
-
-    // If not cached, fetch from server
-    return this.http.get(`${this.apiUrl}/rp/config/${domain}`).pipe(
-      tap(config => {
-        // Cache the config for future use
-        this.configCache[domain] = config;
-      }),
-      catchError(this.handleError('getConfig', []))
-    );
-  }
-
-  updateServerConfig(domain: string): Observable<any> {
-    const wideConfig = environment.wide.wideConfig;
-
-    return this.http.post(`${this.apiUrl}/rp/config/${domain}`, wideConfig).pipe(
+  updateServerConfig(domain: string, config: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/rp/config/${domain}`, config).pipe(
       catchError(this.handleError('updateServerConfig', []))
     );
   }

@@ -5,5 +5,16 @@
 <p class="bold">Prove your membership at Crypto Hub Malta and sign up as an early DAO contributor</p>
 <p>Click on 'Continue with WIDE' to securely present your credentials for verification. Once your eligibility is confirmed, you'll gain access to register as a CHM DAO summoner.</p>
 <div class="buttons">
-    <button (click)="beginPresentationFlow()">Continue with WIDE</button>
+    <ng-container *ngIf="!isLoggedIn">
+        <button (click)="beginPresentationFlow()">Sign up with WIDE</button>
+        <button (click)="beginSignInFlow()">Member Login</button>
+    </ng-container>
+</div>
+<div class="buttons-vertical">
+    <ng-container *ngIf="isLoggedIn">
+        <p *ngIf="isLoggedIn">You are logged in as user <i>{{userId}}</i></p>
+        <div>
+            <button (click)="signOut()" *ngIf="isLoggedIn">Sign out</button>
+        </div>
+    </ng-container>
 </div>

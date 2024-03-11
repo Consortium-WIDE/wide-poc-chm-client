@@ -1,0 +1,31 @@
+<div *ngIf="isLoggedIn && leaderboard.length">
+    <h2>Crypto Ħub Malta Top 10 Leaderboard</h2>
+    <img src="assets/svg/cryptohub_malta_logo.svg" />
+    <div class="info">
+        <i>Logged in as {{user.nickname}}</i>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>User</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entry of leaderboard; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ entry.nickname }}</td>
+                <td>{{ entry.score }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="!leaderboard.length">
+    <p>No leaderboard data available.</p>
+</div>
+<div class="buttons">
+    <button (click)="claimPoap()">Claim New POAP</button>
+    <button (click)="signOut()">Sign Out</button>
+    <button (click)="editProfile()">Edit Profile</button>
+</div>
