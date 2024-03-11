@@ -4,7 +4,7 @@ import { ChmDataService } from '../../services/chm-data.service';
 import { WideService } from '../../services/wide.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { firstValueFrom } from 'rxjs';
 
 @Component({

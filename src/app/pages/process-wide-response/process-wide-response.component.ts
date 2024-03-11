@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ChmDataService } from '../../services/chm-data.service';
 import { firstValueFrom } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { WideService } from '../../services/wide.service';
 

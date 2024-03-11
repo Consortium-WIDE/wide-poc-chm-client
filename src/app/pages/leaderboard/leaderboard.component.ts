@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChmDataService } from '../../services/chm-data.service';
 import { CommonModule } from '@angular/common';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { WideService } from '../../services/wide.service';
 import { firstValueFrom } from 'rxjs';
 
