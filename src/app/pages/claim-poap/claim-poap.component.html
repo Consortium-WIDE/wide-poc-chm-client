@@ -1,0 +1,7 @@
+<ng-container *ngIf="errorMessage">
+    <p>{{errorMessage}}</p>
+    <button (click)="goToLeaderboard()">Back to Leaderboard</button>
+</ng-container>
+<ng-container *ngIf="!errorMessage">
+    <p>Your POAP is being stored...</p>
+</ng-container>
