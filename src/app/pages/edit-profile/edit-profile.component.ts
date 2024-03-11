@@ -129,7 +129,6 @@ export class EditProfileComponent implements OnInit {
           }
 
           if (event.data.status === 'closed') {
-            debugger;
             const issuer = event.data;
             await firstValueFrom(this.chmDataService.updateUser(this.user.userId, payload));
             this.chmDataService.setAuthStatus(true, issuer.wideInternalId, payload.data.nickname, payload.data?.email, payload.data.id);
