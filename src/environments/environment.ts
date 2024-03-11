@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    chmApiUri: 'https://chm-api.wid3-demo.app',
+    chmApiUri: 'https://api.cryptohubmalta.wid3-demo.app',
     wideUri: 'https://wid3.app',
     hostUri: 'https://cryptohubmalta.wid3-demo.app',
     wideRegisterUserPoap: {
@@ -9,7 +9,7 @@ export const environment = {
         wideApiUri: 'https://api.wid3.app',
         wideConfig: {
             "rpName": "Crypto Hub Malta",
-            "serverApiEndpoint": 'https://chm-api.wid3-demo.app/wide/uploadData',
+            "serverApiEndpoint": 'https://api.cryptohubmalta.wid3-demo.app/wide/uploadData',
             "sourceUri": "https://cryptohubmalta.wid3-demo.app",
             "redirectUri": "https://cryptohubmalta.wid3-demo.app/process",
             "logoUri": "https://cryptohubmalta.wid3-demo.app/assets/svg/cryptohub_malta_logo.svg",
@@ -29,7 +29,7 @@ export const environment = {
         wideApiUri: 'https://api.wid3.app',
         wideConfig: {
             "rpName": "Crypto Hub Malta",
-            "serverApiEndpoint": 'https://chm-api.wid3-demo.app/wide/uploadData',
+            "serverApiEndpoint": 'https://api.cryptohubmalta.wid3-demo.app/wide/uploadData',
             "sourceUri": "https://cryptohubmalta.wid3-demo.app",
             "redirectUri": "https://cryptohubmalta.wid3-demo.app/claimpoap",
             "logoUri": "https://cryptohubmalta.wid3-demo.app/assets/svg/cryptohub_malta_logo.svg",
@@ -49,7 +49,7 @@ export const environment = {
         wideApiUri: 'https://api.wid3.app',
         wideConfig: {
             "rpName": "Crypto Hub Malta",
-            "serverApiEndpoint": 'https://chm-api.wid3-demo.app/wide/login',
+            "serverApiEndpoint": 'https://api.cryptohubmalta.wid3-demo.app/wide/login',
             "sourceUri": "https://cryptohubmalta.wid3-demo.app",
             "redirectUri": "https://cryptohubmalta.wid3-demo.app/login",
             "logoUri": "https://cryptohubmalta.wid3-demo.app/assets/svg/cryptohub_malta_logo.svg",
@@ -71,7 +71,7 @@ export const environment = {
         wideApiUri: 'https://api.wid3.app',
         wideConfig: {
             "rpName": "Crypto Hub Malta",
-            "serverApiEndpoint": 'https://chm-api.wid3-demo.app/wide/uploadData',
+            "serverApiEndpoint": 'https://api.cryptohubmalta.wid3-demo.app/wide/uploadData',
             "sourceUri": "https://cryptohubmalta.wid3-demo.app",
             "redirectUri": "https://cryptohubmalta.wid3-demo.app/processProfile/email",
             "logoUri": "https://cryptohubmalta.wid3-demo.app/assets/svg/cryptohub_malta_logo.svg",
