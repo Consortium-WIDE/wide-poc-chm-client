@@ -24,7 +24,6 @@ export class EditProfileComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.chmDataService.getAuthStatus().subscribe(status => {
-      console.log('getAuthStatus', status);
       this.isLoggedIn = status.loggedIn;
       this.user = status;
     });
@@ -98,7 +97,6 @@ export class EditProfileComponent implements OnInit {
   }
 
   async updateWideCredential(wideCredentialId: string, payload: any): Promise<void> {
-    console.log(`update credential with id ${wideCredentialId}`, payload);
     let wideWindow = window.open(`${environment.wideUri}/update/start`, 'WIDE', 'width=600, height=800');
 
     if (!wideWindow) {
