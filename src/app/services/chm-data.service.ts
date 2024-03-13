@@ -20,7 +20,6 @@ export class ChmDataService {
     this.checkLoginStatus().subscribe({
       next: (response) => {
         if (response.success) {
-          console.log('checkLoginStatus A', response);
           // User already logged in
           this.setAuthStatus(true, response.wideCredentialId, response.nickname, response.email, response.userId);
         } else {
@@ -43,7 +42,6 @@ export class ChmDataService {
     return new Observable(observer => {
       this.checkLoginStatus().subscribe({
         next: (statusResponse) => {
-          console.log('checkLoginStatus B', statusResponse);
           if (statusResponse.success) {
             // User already logged in, set auth status and userId
             this.setAuthStatus(true, statusResponse.wideCredentialId, statusResponse.nickname, statusResponse.email, statusResponse.userId);
