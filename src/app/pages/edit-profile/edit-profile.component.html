@@ -1,25 +1,29 @@
 <div class="content">
     <h2>Edit Profile</h2>
-    <div class="info">
+    <!-- <div class="info">
         <i>Logged in as {{userNickname}}</i>
-    </div>
+    </div> -->
     <div class="form">
         <!-- <p>Pending Changes: {{pendingChanges}}</p> -->
         <div class="profile-option">
-            <div class="label">Nickname</div>
-            <div class="input"><input type="text" class="align-center" [(ngModel)]="user.nickname" (ngModelChange)="pendingChanges = true" /></div>
+            <div class="label">Choose a nickname</div>
+            <div class="input">
+                <input type="text" class="align-center" [(ngModel)]="user.nickname" (ngModelChange)="pendingChanges = true" />
+            </div>
         </div>
         <div class="profile-option">
             <div class="label">Email</div>
             <div class="value">
-                <span *ngIf="!user.email">Not Currently Set</span>
+                <span *ngIf="!user.email">You haven't added an e-mail yet.</span>
                 <span *ngIf="user.email">{{user.email}}</span>
             </div>
-            <div class="input"><button (click)="beginOauthFlow()">Add email from OAuth Opovider</button></div>
+            <div class="input">
+                <button class="btn-sm" (click)="beginOauthFlow()">Add email with WIDE</button>
+            </div>
         </div>
     </div>
     <div class="buttons">
         <button *ngIf="this.pendingChanges" (click)="updateUserProfile()">Save Profile</button>
-        <button (click)="goToLeaderboard()">Back to Leaderboard</button>
+        <button class="btn-alt" (click)="goToLeaderboard()">Back to Leaderboard</button>
     </div>
 </div>
