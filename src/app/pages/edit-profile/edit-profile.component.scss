@@ -9,7 +9,8 @@
     }
 
     .form {
-        background: $light-purple;
+        background: $blue-alt;
+        color: $white;
         padding: 10px;
         border-radius: 10px;
 
@@ -17,14 +18,19 @@
             margin-top: 15px;
             text-align: left;
 
+            .input {
+                text-align: center;
+            }
+
             .label {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
                 font-weight: 600;
             }
 
             .value {
                 font-weight: 400;
-                margin-bottom: 5px;
+                font-size: 16px;
+                margin-bottom: 15px;
             }
         }
     }

@@ -1,31 +1,44 @@
-<div *ngIf="isLoggedIn && leaderboard.length">
-    <h2>Crypto Ħub Malta Top 10 Leaderboard</h2>
-    <img src="assets/svg/cryptohub_malta_logo.svg" />
-    <div class="info">
-        <i>Logged in as {{user.nickname}}</i>
+<div class="content">
+    <div class="cryptohub-logo">
+        <img src="assets/svg/cryptohub_malta_logo.svg" />
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>User</th>
-                <th>Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let entry of leaderboard; let i = index">
-                <td>{{ i + 1 }}</td>
-                <td>{{ entry.nickname }}</td>
-                <td>{{ entry.score }}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div *ngIf="!leaderboard.length">
-    <p>No leaderboard data available.</p>
-</div>
-<div class="buttons">
-    <button (click)="claimPoap()">Claim New POAP</button>
-    <button (click)="signOut()">Sign Out</button>
-    <button (click)="editProfile()">Edit Profile</button>
+    <div class="panel">
+        <div class="left leaderboard">
+            <div *ngIf="isLoggedIn && leaderboard.length">
+                <h2>Crypto Ħub Malta Top 10 Leaderboard</h2>
+                <table>
+                    <thead>
+                        <tr class="heading">
+                            <th>Rank</th>
+                            <th>User</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let entry of leaderboard; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ entry.nickname }}</td>
+                            <td>{{ entry.score }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div *ngIf="!leaderboard.length">
+                <p>No leaderboard data available.</p>
+            </div>
+            <div class="buttons">
+                <button (click)="claimPoap()">Claim New POAP</button>
+            </div>
+        </div>
+        <div class="right user-profile">
+            <div class="info">
+                <i class="mdi mdi-account"></i>
+                <i>Logged in as {{user.nickname}}</i>
+            </div>
+            <div class="buttons">
+                <button class="btn-sm" (click)="editProfile()">Edit Profile</button>
+                <button class="btn-sm btn-alt" (click)="signOut()">Log Out</button>
+            </div>
+        </div>
+    </div>
 </div>

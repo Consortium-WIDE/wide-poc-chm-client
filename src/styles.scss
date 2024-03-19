@@ -23,7 +23,7 @@ h6 {
 }
 
 h1 {
-    line-height: 35px;
+  line-height: 35px;
 }
 
 h2 {
@@ -45,20 +45,29 @@ button {
   padding-bottom: 15px;
 
   cursor: pointer;
+
+  &.btn-sm {
+    padding: 10px 20px;
+  }
+
+  &.btn-alt {
+    background: transparent;
+    border: 1px solid $purple;
+    color: $purple;
+  }
 }
 
 /* INPUTS */
 
 input[type=text] {
   border: 1px solid $purple;
-  color: $purple;
   font-weight: 400;
   font-size: 24px;
-  border-radius: 5px;
+  border-radius: 3px;
   line-height: 42px;
   background: $white;
   outline: none;
-  
+
   &.align-center {
     text-align: center;
   }
@@ -126,9 +135,9 @@ input[type=checkbox]:checked {
 }
 
 p {
-    text-align: left;
+  text-align: left;
 
-    &.bold {
-        font-weight: 700;
-    }
+  &.bold {
+    font-weight: 700;
+  }
 }
