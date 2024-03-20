@@ -18,7 +18,7 @@ export const environment = {
             "credential": {
                 "type": ["poap"],
                 "credentialSubject": {
-                    "eventUrl": "https://wid3.xyz"
+                    "eventUrl": "https://linkr.bio/cryptohubmalta"
                 }
             }
         }
@@ -38,7 +38,7 @@ export const environment = {
             "credential": {
                 "type": ["poap"],
                 "credentialSubject": {
-                    "eventUrl": "https://wid3.xyz"
+                    "eventUrl": "https://linkr.bio/cryptohubmalta"
                 }
             }
         }
